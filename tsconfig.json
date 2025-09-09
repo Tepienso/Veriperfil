@@ -18,8 +18,9 @@
         "name": "next"
       }
     ],
+    "baseUrl": "src",
     "paths": {
-      "npx create-next-app@latest veriperfil-nextnpx create-next-app@latest veriperfil-nextnpx create-next-app@latest veriperfil-nextnpx create-next-app@latest veriperfil-next@/*": ["./src/*"]
+      "@/*": ["*"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
