@@ -1,7 +1,13 @@
 import React from "react";
 import QRPerfil from "@/components/QRPerfil";
 
-export default function PerfilPage({ params }: { params: { id: string } }) {
+type PerfilPageProps = {
+  params: {
+    id: string;
+  };
+};
+
+export default function PerfilPage({ params }: PerfilPageProps) {
   return (
     <div>
       <h1>Perfil {params.id}</h1>
@@ -9,3 +15,4 @@ export default function PerfilPage({ params }: { params: { id: string } }) {
     </div>
   );
 }
+
