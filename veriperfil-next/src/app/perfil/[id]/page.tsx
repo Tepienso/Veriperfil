@@ -1,18 +1,15 @@
-import React from "react";
 import QRPerfil from "@/components/QRPerfil";
 
-type PerfilPageProps = {
-  params: {
-    id: string;
-  };
-};
+interface PageProps {
+  params: Promise<{ id: string }>;
+}
 
-export default function PerfilPage({ params }: PerfilPageProps) {
+export default async function PerfilPage({ params }: PageProps) {
+  const { id } = await params;
   return (
     <div>
-      <h1>Perfil {params.id}</h1>
-      <QRPerfil id={params.id} />
+      <h1>Perfil {id}</h1>
+      <QRPerfil id={id} />
     </div>
   );
 }
-
