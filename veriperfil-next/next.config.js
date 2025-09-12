@@ -1,11 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-  experimental: {
-    css: {
-      lightningcss: false
-    }
-  }
-}
+  reactStrictMode: true
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;
