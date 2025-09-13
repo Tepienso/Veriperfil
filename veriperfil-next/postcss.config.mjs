@@ -3,3 +3,4 @@ const config = {
 };
 
 export default config;
+// Esto es un comentario de una sola línea
