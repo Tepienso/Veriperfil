@@ -1,9 +1,11 @@
 import Link from 'next/link';
+import Saludo from '../components/Saludo';
 
 export default function Home() {
   return (
     <div style={{ padding: '2rem', fontFamily: 'sans-serif' }}>
       <h1>Bienvenido a Veriperfil</h1>
+      <Saludo />
       <p>Haz clic en el enlace para ir a un perfil de prueba:</p>
       <Link href="/perfil/12345">
         Ir al perfil de prueba (ID: 12345)
