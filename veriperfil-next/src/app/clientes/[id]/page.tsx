@@ -1,14 +1,18 @@
+const clientes = {
+  "12345": { nombre: "Juan Pérez", email: "juan@example.com" },
+  "67890": { nombre: "Ana Gómez", email: "ana@example.com" },
+};
+
 export default function Cliente(props: unknown) {
   const { id } = (props as { params: { id: string } }).params;
+  const cliente = clientes[id] ?? { nombre: "Desconocido", email: "-" };
 
   return (
-    <div style={{ padding: '2rem', fontFamily: 'sans-serif' }}>
+    <div style={{ padding: "2rem", fontFamily: "sans-serif" }}>
       <h1>Cliente dinámico</h1>
-      <p>
-        Mostrando información del cliente con ID:{" "}
-        <strong>{id}</strong>
-      </p>
-      <p>Este es un cliente de prueba generado dinámicamente.</p>
+      <p><strong>ID:</strong> {id}</p>
+      <p><strong>Nombre:</strong> {cliente.nombre}</p>
+      <p><strong>Email:</strong> {cliente.email}</p>
     </div>
   );
 }
