@@ -1,8 +1,8 @@
-interface Params {
+interface PageProps {
   params: { id: string };
 }
 
-export default function Perfil({ params }: Params) {
+export default function Perfil({ params }: PageProps) {
   return (
     <div style={{ padding: '2rem', fontFamily: 'sans-serif' }}>
       <h1>Perfil dinámico</h1>
@@ -11,3 +11,4 @@ export default function Perfil({ params }: Params) {
     </div>
   );
 }
+
