@@ -1,3 +1,9 @@
+// Mock de clientes dinámico
+const clientes = {
+  "12345": { nombre: "Juan Pérez", email: "juan@example.com" },
+  "67890": { nombre: "Ana Gómez", email: "ana@example.com" },
+};
+
 const clientes = {
   "12345": { nombre: "Juan Pérez", email: "juan@example.com" },
   "67890": { nombre: "Ana Gómez", email: "ana@example.com" },
