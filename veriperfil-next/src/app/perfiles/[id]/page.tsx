@@ -1,4 +1,6 @@
-export default function Perfil({ params }: any) {
+// src/app/perfiles/[id]/page.tsx
+
+export default function Perfil({ params }: { params: Record<string, string> }) {
   return (
     <div style={{ padding: '2rem', fontFamily: 'sans-serif' }}>
       <h1>Perfil dinámico</h1>
