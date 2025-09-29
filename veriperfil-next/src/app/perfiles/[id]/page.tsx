@@ -1,7 +1,8 @@
-export default function Perfil({ params }: unknown) {
-  // Evitamos tipar la firma del componente para no chocar con PageProps.
-  // Tipamos SOLO el uso interno con una aserción segura.
-  const { id } = (params as { id: string });
+// src/app/perfiles/[id]/page.tsx
+
+export default function Perfil(props: unknown) {
+  // Aserción interna: decimos que props es un objeto con params.id
+  const { id } = (props as { params: { id: string } }).params;
 
   return (
     <div style={{ padding: '2rem', fontFamily: 'sans-serif' }}>
@@ -14,6 +15,7 @@ export default function Perfil({ params }: unknown) {
     </div>
   );
 }
+
 
 
 
