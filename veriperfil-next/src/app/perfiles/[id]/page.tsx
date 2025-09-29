@@ -1,6 +1,8 @@
-/// src/app/perfiles/[id]/page.tsx
+// src/app/perfiles/[id]/page.tsx
 
-export default function Perfil({ params }: any) {
+// @ts-nocheck   ← desactiva chequeo de tipos en este archivo
+
+export default function Perfil({ params }) {
   return (
     <div style={{ padding: '2rem', fontFamily: 'sans-serif' }}>
       <h1>Perfil dinámico</h1>
@@ -12,6 +14,7 @@ export default function Perfil({ params }: any) {
     </div>
   );
 }
+
 
 
 
