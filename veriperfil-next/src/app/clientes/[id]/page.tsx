@@ -4,11 +4,6 @@ const clientes = {
   "67890": { nombre: "Ana Gómez", email: "ana@example.com" },
 };
 
-const clientes = {
-  "12345": { nombre: "Juan Pérez", email: "juan@example.com" },
-  "67890": { nombre: "Ana Gómez", email: "ana@example.com" },
-};
-
 export default function Cliente(props: unknown) {
   const { id } = (props as { params: { id: string } }).params;
   const cliente = clientes[id] ?? { nombre: "Desconocido", email: "-" };
