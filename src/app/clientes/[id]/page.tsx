@@ -4,7 +4,10 @@ const clientes: Record<string, { nombre: string; email: string }> = {
   "67890": { nombre: "Ana Gómez", email: "ana@example.com" },
 };
 
-export const dynamic = "force-dynamic";
+// ✅ Genera las rutas en el build
+export async function generateStaticParams() {
+  return Object.keys(clientes).map((id) => ({ id }));
+}
 
 export default function Cliente({ params }: { params: { id: string } }) {
   const { id } = params;
