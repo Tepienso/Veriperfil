@@ -4,6 +4,8 @@ const clientes: Record<string, { nombre: string; email: string }> = {
   "67890": { nombre: "Ana Gómez", email: "ana@example.com" },
 };
 
+export const dynamicParams = true;
+
 export default function Cliente({ params }: { params: { id: string } }) {
   const { id } = params;
   const cliente = clientes[id] ?? { nombre: "Desconocido", email: "-" };
@@ -17,3 +19,4 @@ export default function Cliente({ params }: { params: { id: string } }) {
     </div>
   );
 }
+
