@@ -4,7 +4,7 @@ const clientes: Record<string, { nombre: string; email: string }> = {
   "67890": { nombre: "Ana Gómez", email: "ana@example.com" },
 };
 
-export const dynamicParams = true;
+export const dynamic = "force-dynamic";
 
 export default function Cliente({ params }: { params: { id: string } }) {
   const { id } = params;
