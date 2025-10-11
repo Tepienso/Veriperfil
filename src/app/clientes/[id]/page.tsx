@@ -1,11 +1,11 @@
 // Mock de clientes dinámico
-const clientes = {
+const clientes: Record<string, { nombre: string; email: string }> = {
   "12345": { nombre: "Juan Pérez", email: "juan@example.com" },
   "67890": { nombre: "Ana Gómez", email: "ana@example.com" },
 };
 
-export default function Cliente(props: unknown) {
-  const { id } = (props as { params: { id: string } }).params;
+export default function Cliente({ params }: { params: { id: string } }) {
+  const { id } = params;
   const cliente = clientes[id] ?? { nombre: "Desconocido", email: "-" };
 
   return (
